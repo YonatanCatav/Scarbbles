@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-var arrButtons = [];
 
-var height = 9;
-var width = 15;
-
-class Form extends Component {
+class PlayerPanel extends Component {
 
     constructor() {
         super();
@@ -30,8 +26,8 @@ class Form extends Component {
         for(let y=0;y<height;y++) {
             var buttonsLine = [];
             for (let i = 0; i < width; i++) { //Moved your loop outside render()'s return
-                buttonsLine.push(<button class="button" onClick={this.onClick}>
-                </button>)
+                buttonsLine.push(<div class="back"><button class="button" onClick={this.onClick}>{i}
+                </button></div>)
             }
             arrButtons.push(<div>{buttonsLine}</div>);
         }
